@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Painel de Reuniões</title>
+		<link rel="stylesheet" href="spectre/spectre.min.css">
+		<link rel="stylesheet" href="spectre/spectre-icons.min.css">
+		<link rel="stylesheet" href="local.css">
+		<link rel="icon" href="favicon.ico"  type="image/x-icon">
+		<script src="stopwatch.js"></script>
+		<script src="talklist.js"></script>
+	</head>
+	<body>
+		<div class="card text-center bg-primary">
+			<div class="card-header">
+				<input id="message" placeholder="Mensagem importante e fixa"></input>
+			</div>
+			<div id="main-display" class="card-body">
+				<progress id="sw-bar" class="progress" value="0" max="100"></progress>
+				<div class="hero-body">
+					<h1 id="sw-time">00:00:00</h1>
+				</div>
+			</div>
+		</div>
+		
+		<form class="form-horizontal bg-secondary">
+			<div class="form-group">
+				<div class="col-1 col-sm-12">
+					<input type="button" id="tl-inter" class="btn disabled" value="Intervir">
+				</div>
+				<div class="col-3 col-sm-12 text-center">
+					<div id="tl-person" class="badge" data-badge=""></div>
+				</div>
+				<div class="btn-group btn-group-block col-4 col-sm-12">
+					<input type="button" id="tl-next" class="btn disabled" value="Próximo">
+					<input type="button" id="sw-play" class="btn disabled" value="Iniciar">
+					<input type="button" id="sw-reset" class="btn disabled" value="Reset">
+				</div>
+				<div class="text-right col-3 col-sm-12">
+					<label for="talktime">Tempo de fala</label>
+				</div>
+				<div class="col-1 col-sm-12">
+					<input class="form-input tooltip" type="number" id="talktime" min="1" max="60" value="5">
+				</div>
+			</div>
+		</form>
+		
+		<div class="panel bg-gray">
+			<div class="panel-header text-center">
+				<div class="panel-title h3">Lista de Inscrições</div>
+				<div class="form-group">
+					<div class="input-group">
+						<input id="tl-entry" type="text" class="form-input" placeholder="Nome do inscrito para fala">
+						<button id="tl-button" class="btn btn-primary input-group-btn">Inscrever</button>
+					</div>
+				</div>
+			</div>
+			<div id="tl-list" class="btn-group btn-group-block">
+				<!--button class="btn btn-secondary"><i class="icon icon-delete"></i> Pessoa</button-->
+			</div>
+		</div>
+
+		<div class="text-center text-gray">
+			<i class="text-gray icon icon-people"></i>
+			<i class="text-primary icon icon-people"></i>
+			<i class="text-gray icon icon-people"></i><br>
+			<b>Divergents</b> - Desenvolvido por <a href="http://blog.cordeis.com/">Cárlisson Galdino</a>, com uso do <a href="https://code-boxx.com/simple-javascript-stopwatch/">Simple Javascript Stopwatch</a> e do <a href="https://picturepan2.github.io/spectre/index.html">Spectre.css</a>.
+		</div>
+
+	</body>
+</html>
